@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>婚纱照拍摄沟通事项</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wedding: {
+              cream: '#F8F5F0',
+              gold: '#C8B499',
+              dark: '#332E2A',
+              light: '#EAE3DB'
+            }
+          },
+          fontFamily: {
+            song: ['SimSun', 'serif'],
+            sans: ['Noto Sans SC', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .card-shadow { box-shadow: 0 10px 30px rgba(51,46,42,.08); }
+      .img-shadow { box-shadow: 0 8px 24px rgba(200,180,153,.24); }
+      .fold-panel { transition: max-height .35s ease; }
+      .glass { backdrop-filter: blur(8px); }
+    }
+  </style>
+</head>
+<body class="bg-wedding-cream text-wedding-dark font-sans">
+  <div class="max-w-7xl mx-auto px-4 py-8 md:py-12">
+    <header class="text-center mb-8 md:mb-10">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-wedding-gold/50 text-sm text-wedding-gold mb-4">
+        <i class="fa fa-bookmark-o"></i><span>阅读大概 7 分钟</span>
+      </div>
+      <h1 class="text-[clamp(2rem,4vw,3rem)] font-song tracking-wider mb-3">婚纱照拍摄沟通事项</h1>
+      <p class="text-sm md:text-base text-stone-600 max-w-3xl mx-auto leading-7">四套风格完整需求清单</p>
+    </header>
+
+    <section class="grid lg:grid-cols-3 gap-5 mb-8">
+      <article class="lg:col-span-2 bg-white rounded-3xl p-6 md:p-8 card-shadow">
+        <h2 class="text-xl font-song mb-5 flex items-center gap-2"><i class="fa fa-heart text-wedding-gold"></i> 关于我们</h2>
+        <div class="grid md:grid-cols-2 gap-4 text-sm leading-7">
+          <div class="bg-wedding-light rounded-2xl p-5">
+            <h3 class="font-semibold mb-3">女生</h3>
+            <ul class="space-y-1.5 text-stone-700">
+              <li>身高：170cm</li>
+              <li>体重：67kg</li>
+              <li>鞋码：39</li>
+              <li>星座：处女座</li>
+              <li>特点：方圆脸、黑眼圈比较重、双眼皮比较难贴</li>
+            </ul>
+          </div>
+          <div class="bg-wedding-light rounded-2xl p-5">
+            <h3 class="font-semibold mb-3">男生</h3>
+            <ul class="space-y-1.5 text-stone-700">
+              <li>身高：173cm</li>
+              <li>体重：68kg</li>
+              <li>鞋码：40</li>
+              <li>星座：天蝎座</li>
+              <li>特点：黄黑皮，脸上有痘坑，需要控油遮瑕</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <aside class="bg-white rounded-3xl p-6 card-shadow">
+        <h2 class="text-xl font-song mb-4 flex items-center gap-2"><i class="fa fa-map-signs text-wedding-gold"></i> 本次风格</h2>
+        <ul class="space-y-3 text-sm leading-6 text-stone-700">
+          <li>① 艺术高定：巴贝特之宴</li>
+          <li>② 南法花园：德琳娜1.0</li>
+          <li>③ 暮光森林：森林婚礼2.0</li>
+          <li>④ 天鹅岛：春野浮绿</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="grid lg:grid-cols-2 gap-5 mb-8">
+      <article class="bg-white rounded-3xl p-6 md:p-8 card-shadow">
+        <h2 class="text-xl font-song mb-5 flex items-center gap-2"><i class="fa fa-paint-brush text-wedding-gold"></i> 想对妆造老师说</h2>
+        <div class="grid md:grid-cols-[1.1fr,.9fr] gap-5 items-start">
+          <div>
+            <p class="text-sm leading-7 text-stone-700 mb-3"><span class="font-semibold text-wedding-dark">女生：</span>方圆脸、黑眼圈比较重，双眼皮比较难贴。</p>
+            <p class="text-sm leading-7 text-stone-700 mb-4"><span class="font-semibold text-wedding-dark">妆造诉求：</span>底妆清透，想要自然白开水的妆容。</p>
+            <button onclick="openLightbox('图片 1.png','妆造参考图')" class="group block overflow-hidden rounded-2xl img-shadow">
+              <img src="图片 1.png" alt="妆造参考图" class="w-full h-72 object-cover transition duration-300 group-hover:scale-105" loading="lazy">
+            </button>
+          </div>
+          <div class="bg-wedding-light rounded-2xl p-5">
+            <p class="text-sm leading-7 text-stone-700"><span class="font-semibold text-wedding-dark">男生：</span>黄黑皮，脸上有痘坑，需要控油遮瑕。</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-3xl p-6 md:p-8 card-shadow">
+        <h2 class="text-xl font-song mb-5 flex items-center gap-2"><i class="fa fa-camera text-wedding-gold"></i> 想对摄影老师说</h2>
+        <div class="space-y-4 text-sm leading-7 text-stone-700">
+          <p>希望拍摄时老师能多多提醒。因为我们平时不经常拍照，属于两个 i 人，希望老师多多指导我们动作和表情。</p>
+          <p>这几个场景我们有一些特别想拍的动作，希望摄影老师可以指导下拍摄。</p>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <a href="#styles" class="px-4 py-2 rounded-full bg-wedding-dark text-white text-xs hover:opacity-90">查看灵感图</a>
+            <button onclick="expandAll()" class="px-4 py-2 rounded-full border border-wedding-gold text-xs text-wedding-dark hover:bg-wedding-light">全部展开</button>
+            <button onclick="collapseAll()" class="px-4 py-2 rounded-full border border-stone-300 text-xs text-stone-600 hover:bg-stone-50">全部收起</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="styles" class="space-y-4"></section>
+
+    <footer class="mt-10 bg-white rounded-3xl p-6 md:p-8 card-shadow text-center">
+      <h2 class="text-xl font-song mb-3">写在最后</h2>
+      <p class="text-sm leading-7 text-stone-700 max-w-3xl mx-auto">非常感谢各位老师耐心看到这里，后续有劳各位多多费心。拍摄现场还是以各位老师结合我们的个人特征做出的调整为主，希望我们合作愉快~</p>
+    </footer>
+  </div>
+
+  <div id="lightbox" class="fixed inset-0 bg-black/70 glass hidden items-center justify-center z-50 p-4" onclick="closeLightbox()">
+    <div class="max-w-5xl w-full" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between text-white mb-3">
+        <p id="lightboxTitle" class="text-sm md:text-base"></p>
+        <button onclick="closeLightbox()" class="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25"><i class="fa fa-close"></i></button>
+      </div>
+      <img id="lightboxImage" src="" alt="预览图" class="w-full max-h-[82vh] object-contain rounded-2xl img-shadow bg-black/20">
+    </div>
+  </div>
+
+  <script>
+    const makeImages = (start, end, label) => Array.from({ length: end - start + 1 }, (_, i) => ({
+      src: `图片 ${start + i}.png`,
+      alt: `${label}${i + 1}`
+    }));
+
+    const sections = [
+      {
+        id: 'style1',
+        title: '① 艺术高定 · 巴贝特之宴',
+        note: '偏情绪、质感、仪式感画面。',
+        images: makeImages(2, 10, '高定参考')
+      },
+      {
+        id: 'style2',
+        title: '② 南法花园 · 德琳娜1.0',
+        note: '偏轻盈、松弛、花园漫步感。',
+        images: makeImages(11, 15, '南法参考')
+      },
+      {
+        id: 'style3',
+        title: '③ 暮光森林 · 森林婚礼2.0',
+        note: '偏自然、氛围、故事感。',
+        images: makeImages(16, 25, '森林参考')
+      },
+      {
+        id: 'style4',
+        title: '④ 天鹅岛 · 春野浮绿',
+        note: '偏清新、明亮、草坪呼吸感。',
+        images: makeImages(26, 31, '天鹅岛参考')
+      }
+    ];
+
+    const container = document.getElementById('styles');
+
+    container.innerHTML = sections.map(section => `
+      <article class="bg-white rounded-3xl overflow-hidden card-shadow">
+        <button onclick="togglePanel('${section.id}')" class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-wedding-light/60 transition">
+          <div>
+            <h3 class="text-lg md:text-xl font-song mb-1">${section.title}</h3>
+            <p class="text-xs md:text-sm text-stone-500">${section.note} · 共 ${section.images.length} 张参考图</p>
+          </div>
+          <i id="icon-${section.id}" class="fa fa-angle-down text-2xl text-wedding-gold transition-transform"></i>
+        </button>
+        <div id="${section.id}" class="fold-panel max-h-0 overflow-hidden">
+          <div class="px-6 pb-6 grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
+            ${section.images.map(item => `
+              <button onclick="openLightbox('${item.src}','${item.alt}')" class="group text-left rounded-2xl overflow-hidden bg-stone-50 img-shadow">
+                <img src="${item.src}" alt="${item.alt}" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105" loading="lazy">
+                <span class="block px-4 py-3 text-xs text-stone-600 bg-white">${item.alt}</span>
+              </button>
+            `).join('')}
+          </div>
+        </div>
+      </article>
+    `).join('');
+
+    function togglePanel(id) {
+      const panel = document.getElementById(id);
+      const icon = document.getElementById(`icon-${id}`);
+      const isOpen = panel.style.maxHeight && panel.style.maxHeight !== '0px';
+      panel.style.maxHeight = isOpen ? '0px' : `${panel.scrollHeight}px`;
+      icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+    }
+
+    function expandAll() {
+      sections.forEach(({ id }) => {
+        const panel = document.getElementById(id);
+        const icon = document.getElementById(`icon-${id}`);
+        panel.style.maxHeight = `${panel.scrollHeight}px`;
+        icon.style.transform = 'rotate(180deg)';
+      });
+    }
+
+    function collapseAll() {
+      sections.forEach(({ id }) => {
+        const panel = document.getElementById(id);
+        const icon = document.getElementById(`icon-${id}`);
+        panel.style.maxHeight = '0px';
+        icon.style.transform = 'rotate(0deg)';
+      });
+    }
+
+    function openLightbox(src, title) {
+      document.getElementById('lightboxImage').src = encodeURI(src);
+      document.getElementById('lightboxTitle').textContent = title;
+      document.getElementById('lightbox').classList.remove('hidden');
+      document.getElementById('lightbox').classList.add('flex');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.add('hidden');
+      document.getElementById('lightbox').classList.remove('flex');
+    }
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
